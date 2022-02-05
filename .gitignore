@@ -139,3 +139,6 @@ Desktop.ini
 ######################
 .eslintcache
 /.idea/
+
+.mvn
+.mvn/**
