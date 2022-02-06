@@ -83,6 +83,10 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                        <includeLayerTools>true</includeLayerTools>
+                    </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -116,16 +120,6 @@
                     <compilerArgs>
                         <compilerArg>-Amapstruct.defaultComponentModel=spring</compilerArg>
                     </compilerArgs>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <layers>
-                        <enabled>true</enabled>
-                        <includeLayerTools>true</includeLayerTools>
-                    </layers>
                 </configuration>
             </plugin>
         </plugins>
