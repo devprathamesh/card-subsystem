@@ -13,6 +13,4 @@ public interface CardService {
     CardDto updateCard(UUID cardId, CardDto cardDto);
 
     CardDto getByUpc(String upc);
-
-    void deleteCardById(UUID cardId);
 }

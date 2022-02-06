@@ -9,6 +9,6 @@ public interface CardMapper {
 
     CardDto cardToCardDto(Card card);
 
-    Card CardDtoToCard(CardDto cardDto);
+    Card cardDtoToCard(CardDto cardDto);
 }
 
