@@ -1,6 +1,8 @@
 package dev.learnx.cardsubsystem.domain;
 
-import dev.learnx.cardsubsystem.web.CardStatusEnum;
+import dev.learnx.cardsubsystem.web.model.CardIssuerEnum;
+import dev.learnx.cardsubsystem.web.model.CardStatusEnum;
+import dev.learnx.cardsubsystem.web.model.CardTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,6 +36,9 @@ public class Card {
 
     private String cardNumber;
     private CardStatusEnum cardStatus;
+    private CardTypeEnum cardType;
+    private CardIssuerEnum cardIssuer;
+
     private String upc;
 
     private BigDecimal balance;

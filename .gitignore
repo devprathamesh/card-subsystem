@@ -142,3 +142,4 @@ Desktop.ini
 
 .mvn
 .mvn/**
+target/

@@ -26,8 +26,13 @@ public class CardDto {
     @NotBlank
     private String cardStatus;
 
-    private String upc;
+    @NotBlank
+    private String cardType;
 
+    @NotBlank
+    private String cardIssuer;
+
+    private String upc;
     private BigDecimal balance;
 
     private OffsetDateTime createdDate;
