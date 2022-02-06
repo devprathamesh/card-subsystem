@@ -27,7 +27,7 @@ public class CardServiceImpl implements CardService{
 
     @Override
     public CardDto saveNewCard(CardDto cardDto) {
-        return null;
+        return cardMapper.cardToCardDto(cardRepository.save(cardMapper.cardDtoToCard(cardDto)));
     }
 
     @Override

@@ -32,4 +32,16 @@ public class CardController {
     public ResponseEntity updateCardById(@PathVariable("cardId") UUID cardId, @RequestBody @Validated CardDto cardDto){
         return new ResponseEntity<>(cardService.updateCard(cardId, cardDto), HttpStatus.NO_CONTENT);
     }
+
+    @PostMapping(path = "card")
+    public ResponseEntity saveNewCard(@RequestBody @Validated CardDto cardDto){
+
+        CardDto savedCard = cardService.saveNewCard(cardDto);
+
+        return ResponseEntity
+                .created(UriComponentsBuilder
+                        .fromHttpUrl("http://127.0.0.1:8080/api/v1/card/" + savedCard.getId().toString())
+                        .build().toUri())
+                .build();
+    }
 }
